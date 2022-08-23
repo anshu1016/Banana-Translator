@@ -1,9 +1,11 @@
-var btnTranslate = document.querySelector("#btn");
+var btn = document.querySelector("#btnTranslator");
 var txtInput = document.querySelector("#txt-input");
 var txtOutput = document.querySelector("#txt-output");
 
-//var serverLink = "https://api.funtranslations.com/translate/minion.json"
-var serverLink = "	https://api.funtranslations.com/translate/dothraki.json"
+//var serverLink = "	https://api.funtranslations.com/translate/numbers.json"
+var serverLink  = "	https://api.funtranslations.com/translate/minion.json"
+
+//var serverLink = "	https://api.funtranslations.com/translate/dothraki.json"
 function getTranslationLink(input){
     return serverLink +"?" +"text=" +input
 }
@@ -22,5 +24,4 @@ function clickHandler(){
     })
     .catch(errorHandler)
 };
-btnTranslate.addEventListener("click",clickHandler)
-
+btn.addEventListener("click",clickHandler)
